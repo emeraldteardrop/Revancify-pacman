@@ -1,4 +1,4 @@
-#!/usr/bin/bash -xv
+#!/usr/bin/bash
 #get rid of the debug thing in initialize()
 
 
@@ -23,6 +23,8 @@ setEnv() {
 }
 
 initialize() {
+    set -x
+    set -v
     exec 5> /data/data/com.termux/files/home/Revancify/debugmain.log
 PS4="$LINENO|"
 BASH_XTRACEFD="5"
