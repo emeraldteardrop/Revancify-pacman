@@ -1,0 +1,7 @@
+if [ -f "$DATA/aapt2" ] && bins=$(ls "$BIN") && grep -q java <<<"$bins" && grep -q wget <<<"$bins" && grep -q tput <<<"$bins" && grep -q dialog <<<"$bins" && grep -q pup <<<"$bins" && grep -q jq <<<"$bins" && ls "$BIN/revancify" >/dev/null 2>&1 && ls "$HOME/storage" >/dev/null 2>&1; then
+        return 0
+        
+(       
+(?:java|wget|tput|dialog|pup|jq)
+
+openjdk-17 wget ncurses-utils dialog pup jq
