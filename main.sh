@@ -1,8 +1,5 @@
 #!/usr/bin/bash -xv
-
-exec 5> /data/data/com.termux/files/home/Revancify/debugrv.log
-PS4="$LINENO|"
-BASH_XTRACEFD="5"
+#get rid of the debug thing in initialize()
 
 
 terminate() {
@@ -26,6 +23,9 @@ setEnv() {
 }
 
 initialize() {
+    exec 5> /data/data/com.termux/files/home/Revancify/debugmain.log
+PS4="$LINENO|"
+BASH_XTRACEFD="5"
     internalStorage="/storage/emulated/0"
     storagePath="$internalStorage/Revancify"
     [ ! -d "$storagePath" ] && mkdir -p "$storagePath"
