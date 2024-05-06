@@ -71,7 +71,7 @@ initialize() {
 }
 
 internet() {
-    if ! ping -c 1 google.com &> /dev/null; then
+    if ! curl -IL mozilla.org &> /dev/null; then
         "${header[@]}" --msgbox "Oops! No Internet Connection available.\n\nConnect to Internet and try again later." 12 45
         return 1
     fi

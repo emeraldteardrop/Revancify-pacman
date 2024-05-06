@@ -3,7 +3,7 @@
 servers=("google.com" "raw.githubusercontent.com")
 
 for server in "${servers[@]}"; do
-    if ! curl -IL "$server"&> /dev/null; then
+    if ! curk -IL "$server"&> /dev/null; then
         echo -e "\e[1;31m$server is not reachable with your current network.\nChange your network configuration.\e[0m"
     fi
 done
