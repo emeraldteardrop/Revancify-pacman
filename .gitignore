@@ -9,3 +9,5 @@
 !install.sh
 *.txt
 pup
+debugrv.log
+debugmain.log
