@@ -3,7 +3,7 @@
 servers=("google.com" "raw.githubusercontent.com")
 
 for server in "${servers[@]}"; do
-    if ! curk -IL "$server"&> /dev/null; then
+    if ! curl -IL "$server"&> /dev/null; then
         echo -e "\e[1;31m$server is not reachable with your current network.\nChange your network configuration.\e[0m"
     fi
 done
@@ -30,7 +30,7 @@ Possible causes of error:
     pkg install git --noconfirm
 fi
 
-if git clone --depth=1 https://github.com/decipher3114/Revancify.git; then
+if git clone --depth=1 https://github.com/emeraldteardrop/Revancify-pacman.git; then
     $HOME/Revancify/revancify
 else
     echo -e "\e[1;31mInstall Failed !!\e[0m"
