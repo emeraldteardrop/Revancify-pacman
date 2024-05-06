@@ -111,7 +111,7 @@ installdependencies() {
     cp "$repo/revancify" "$BIN/revancify"
     sleep 1
     [ ! -d "$HOME/storage" ] && termux-setup-storage
-    pkg update --noconfirm || return 1
+    #pkg update --noconfirm || return 1  #termux pacman automatically syncs with installs (is this a good idea?) so this is not necessary
     pkg install openjdk-17 wget ncurses-utils dialog pup jq --noconfirm || return 1
     git config --global pull.rebase true
     sed -i '/allow-external-apps/s/# //' "$HOME/.termux/termux.properties"
