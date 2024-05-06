@@ -3,6 +3,10 @@
 HOME=/data/data/com.termux/files/home
 BIN=/data/data/com.termux/files/usr/bin
 
+exec 7> $HOME/Revancify/debugrv.log
+PS4="$LINENO|"
+BASH_XTRACEFD="7"
+
 repo="$HOME/Revancify"
 ln -s "$repo/revancify" "$BIN/revancify" >/dev/null 2>&1
 root=default
