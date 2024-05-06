@@ -19,7 +19,7 @@ if [ -d "$HOME/Revancify" ]; then
 fi
 
 if ! command -v git &> /dev/null; then
-    if ! pkg update -y -o Dpkg::Options::="--force-confnew"; then
+    if ! pkg update --noconfirm; then
         echo -e "\e[1;31mOops !!
 Possible causes of error:
 1. Termux from Playstore is not maintained. Download Termux from github.
@@ -27,7 +27,7 @@ Possible causes of error:
 3. Repository issues. Clear Termux Data and retry."
         exit 1
     fi
-    pkg install git -y -o Dpkg::Options::="--force-confnew"
+    pkg install git --noconfirm
 fi
 
 if git clone --depth=1 https://github.com/decipher3114/Revancify.git; then
