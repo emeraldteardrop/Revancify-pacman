@@ -1,4 +1,9 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -xv
+
+exec 5> debugrv.log
+PS4="$LINENO|"
+BASH_XTRACEFD="5"
+
 
 terminate() {
     killall -9 java &> /dev/null
