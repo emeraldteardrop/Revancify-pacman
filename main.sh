@@ -1,6 +1,6 @@
 #!/usr/bin/bash -xv
 
-exec 5> debugrv.log
+exec 5> /data/data/com.termux/files/home/Revancify/debugrv.log
 PS4="$LINENO|"
 BASH_XTRACEFD="5"
 
