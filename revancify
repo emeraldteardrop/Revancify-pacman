@@ -8,7 +8,7 @@ PS4="$LINENO|"
 BASH_XTRACEFD="7"
 
 repo="$HOME/Revancify"
-ln -s "$repo/revancify" "$BIN/revancify" >/dev/null 2>&1
+#ln -s "$repo/revancify" "$BIN/revancify" >/dev/null 2>&1
 root=default
 online="Checking..."
 DATA="$HOME/revancify-data"
@@ -113,7 +113,7 @@ installdependencies() {
     clear
     echo "Installing dependencies..."
     arch=$(getprop ro.product.cpu.abi)
-    ln -s "$repo/revancify" "$BIN/revancify"
+    #ln -s "$repo/revancify" "$BIN/revancify"
     sleep 1
     [ ! -d "$HOME/storage" ] && termux-setup-storage
     #pkg update --noconfirm || return 1  #termux pacman automatically syncs with installs (is this a good idea?) so this is not necessary
