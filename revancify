@@ -92,7 +92,7 @@ trap terminate SIGTERM SIGINT SIGABRT
 
 checkdependencies() {
     #if [ -f "$DATA/aapt2" ] && bins=$(ls "$BIN") && grep -q java <<<"$bins" && grep -q wget <<<"$bins" && grep -q tput <<<"$bins" && grep -q dialog <<<"$bins" && grep -q pup <<<"$bins" && grep -q jq <<<"$bins" && ls "$BIN/revancify" >/dev/null 2>&1 && ls "$HOME/storage" >/dev/null 2>&1; then
-    if [ -f "$DATA/aapt2" ] && pacman -Qs "openjdk-*|wget|ncurses-utils|dialog|pup|jq" >/dev/null >2&>1 && [ -f "$BIN/java" ] && [ -e "$BIN/revancify" ]; then
+    if [ -f "$DATA/aapt2" ] && pacman -Qs "openjdk-*|wget|ncurses-utils|dialog|pup|jq" &>/dev/null && [ -f "$BIN/java" ] && [ -e "$BIN/revancify" ]; then
         return 0
     else
         if curl -IL mozilla.org >/dev/null 2>&1; then
