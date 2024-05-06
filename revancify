@@ -54,7 +54,7 @@ do
     "-r" | "--reinstall")
                         if curl -IL google.com >/dev/null 2>&1; then
                             rm -rf $DATA
-                            cd "$repo"/.. && rm -rf "$repo" && git clone --depth=1 https://github.com/emeraldteardrop/Revancify-pacman.git && "$repo/revancify" && exit
+                            cd "$repo"/.. && rm -rf "$repo" && git clone --depth=1 https://github.com/emeraldteardrop/Revancify-pacman.git Revancify && "$repo/revancify" && exit
                         else
                             echo "No internet Connection !!"
                             exit 1
@@ -132,7 +132,7 @@ checkrevancify() {
         case "$choice" in
         y | Y)
             rm -rf "$repo"
-            git clone --depth=1 https://github.com/emeraldteardrop/Revancify-pacman.git && $repo/revancify && exit
+            git clone --depth=1 https://github.com/emeraldteardrop/Revancify-pacman.git Revancify && $repo/revancify && exit
             ;;
         n | N)
             echo "Removing revancify completely !!"

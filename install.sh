@@ -30,7 +30,7 @@ Possible causes of error:
     pkg install git --noconfirm
 fi
 
-if git clone --depth=1 https://github.com/emeraldteardrop/Revancify-pacman.git; then
+if git clone --depth=1 https://github.com/emeraldteardrop/Revancify-pacman.git Revancify; then
     $HOME/Revancify/revancify
 else
     echo -e "\e[1;31mInstall Failed !!\e[0m"
